@@ -25,3 +25,12 @@ export const getTimeEvent = (time) => {
 
     return `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes} ${days[day]}, ${date < 10 ? '0' + date : date} tháng ${month}`
 }
+
+export const getTimeNewSong = (time) => {
+    const created = new Date(time * 1000)
+    const month = created.getMonth() + 1
+    const date = created.getDate()
+    const years = created.getFullYear()
+
+    return `${date}.${month}.${years}`
+}

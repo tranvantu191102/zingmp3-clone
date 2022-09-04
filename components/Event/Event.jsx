@@ -9,7 +9,6 @@ import {
 import EventDetail from './EventDetail'
 
 const Event = ({ data }) => {
-    console.log(data)
 
     return (
         <SectionSliderContainer>

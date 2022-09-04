@@ -21,7 +21,7 @@ export const SectionSliderMenu = styled.div`
 
 
 
-const SectionSlider = ({ data }) => {
+const SectionSlider = ({ data, showDescription }) => {
 
     return (
         <SectionSliderContainer>
@@ -29,7 +29,7 @@ const SectionSlider = ({ data }) => {
             <SectionSliderMenu>
                 {
                     data.items.slice(0, 5).map((item, index) => (
-                        <SectionSliderItem item={item} key={index} index={index} />
+                        <SectionSliderItem item={item} key={index} index={index} showDescription={showDescription} />
                     ))
                 }
             </SectionSliderMenu>

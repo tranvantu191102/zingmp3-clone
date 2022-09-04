@@ -1,10 +1,13 @@
 import React, { useState, useRef } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faPlayCircle } from '@fortawesome/free-regular-svg-icons'
 import { faEllipsisH } from '@fortawesome/free-solid-svg-icons'
 import MusicCardOptions from '../MusicCard/MusicCardOptions'
+
+import { ArtistsContainer, Artist } from '../NewSong/NewSongItem'
 
 const SectionSliderItemContainer = styled.div`
     width: 20%;
@@ -169,7 +172,7 @@ const Description = styled.p`
     cursor: auto;
 `
 
-const SectionSliderItem = ({ item, index }) => {
+const SectionSliderItem = ({ item, index, showDescription }) => {
     const [showOptions, setShowOptions] = useState(false)
     const toggleRef = useRef()
     const handleShowOption = () => {
@@ -214,7 +217,20 @@ const SectionSliderItem = ({ item, index }) => {
 
             </SectionSliderImageWrap>
             <Title className='text-limit-one-line '>{item.title}</Title>
-            <Description className='text-limit-two-line '>{item.sortDescription}</Description>
+            {
+                showDescription ?
+                    <Description className='text-limit-two-line '>{item.sortDescription}</Description>
+                    :
+                    <ArtistsContainer className="text-limit-two-line">
+                        {
+                            item?.artists?.map((el, i) => (
+                                <Link key={i} href={`/artists/${el.alias}`}>
+                                    <Artist >{`${i > 0 ? ', ' : ''}${el.name}`}</Artist>
+                                </Link>
+                            ))
+                        }
+                    </ArtistsContainer>
+            }
             <MusicCardOptions
                 active={showOptions}
                 setShowOptions={setShowOptions}

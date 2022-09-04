@@ -10,8 +10,6 @@ const Main = styled.div`
 `
 
 export default function Home({ data }) {
-
-  console.log(data)
   return (
     <div >
       <Head>
@@ -34,10 +32,11 @@ export default function Home({ data }) {
 export const getServerSideProps = async () => {
 
   const data = await getHome()
+
   if (!data) {
     return {
       props: {
-        data: [],
+        data: {},
       },
     }
   }
