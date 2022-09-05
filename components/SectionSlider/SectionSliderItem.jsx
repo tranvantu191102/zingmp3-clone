@@ -12,14 +12,23 @@ import { ArtistsContainer, Artist } from '../NewSong/NewSongItem'
 const SectionSliderItemContainer = styled.div`
     width: 20%;
     position: relative;
+
+    /* @media (max-width: 1024px) {
+        width: 30%;
+    } */
 `
 const SectionSliderImageWrap = styled.div`
     width: calc((100vw - 240px)/6);
-    position: relative;
     height:calc((100vw - 240px)/6);
+    position: relative;
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;
+
+    @media (max-width: 1024px) {
+        width: calc((100vw - 240px)/4);
+    height:calc((100vw - 240px)/4);
+    }
 `
 const SectionSliderImage = styled(Image)`
     border-radius: 10px;
@@ -235,7 +244,7 @@ const SectionSliderItem = ({ item, index, showDescription }) => {
                 active={showOptions}
                 setShowOptions={setShowOptions}
                 toggleRef={toggleRef}
-                lastItem={(index + 1) % 5 === 0}
+                lastItem={(index + 1) % 5 === 0 || (index + 1) % 4 === 0}
             />
         </SectionSliderItemContainer>
     )

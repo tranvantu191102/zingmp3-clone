@@ -5,6 +5,10 @@ import MusicCard from './MusicCard'
 
 const NewReleaseContainer = styled.div`
     padding: 0 54px;
+
+    @media (max-width: 1024px) {
+        padding: 0 20px;
+    }
 `
 const Title = styled.h2`
     margin-top: 26px;

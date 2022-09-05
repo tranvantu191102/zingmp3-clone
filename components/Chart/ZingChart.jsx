@@ -8,6 +8,10 @@ const ZingChartContainer = styled.div`
     align-items: center;
     padding: 0 54px;
     justify-content: space-between;
+
+    @media (max-width: 1024px) {
+        padding: 0 20px;
+    }
 `
 const ZingChartItem = styled(Link)`
 `
@@ -18,6 +22,9 @@ const ImageWrap = styled.div`
     cursor: pointer;
     width: 30%;
     height: 100px;
+    @media (max-width: 1024px) {
+        width: 32%;
+    }
 `
 const ImageMain = styled(Image)`
      border-radius: 10px;

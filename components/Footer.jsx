@@ -41,8 +41,9 @@ const FooterImageWrap = styled.div`
     width: 100%;
     height: 56px;
     padding: 5px;
-    background-color:${props => props.theme.sidebarColor};
+    background-color:${props => props.theme.footerColor};
     overflow: hidden;
+    border-radius: 4px;
 
 `
 const FooterImage = styled.div`

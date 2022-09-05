@@ -18,6 +18,10 @@ const MusicCardOptionsContainer = styled.div`
     pointer-events: ${props => props.active ? 'auto' : 'none'};
     transition: all .2s ease;
     box-shadow: 0 2px 5px ${props => props.theme.secondColor};
+
+    @media (max-width: 1024px) {
+        right: ${props => props.lastItem ? '0' : '-150px'};
+    }
 `
 const MusicCardOptionsItem = styled.div`
     display: flex;

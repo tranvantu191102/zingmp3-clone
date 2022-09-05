@@ -15,6 +15,10 @@ const CenterContainer = styled.div`
     padding-left: 240px;
     margin-top: 70px;
     background-color: ${props => props.theme.bgColor};
+
+    @media (max-width: 1024px) {
+        padding-left: 70px;
+    }
 `
 
 const Center = ({ data }) => {

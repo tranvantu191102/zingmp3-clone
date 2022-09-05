@@ -6,17 +6,22 @@ import { faCirclePlay } from '@fortawesome/free-regular-svg-icons'
 
 const ArtistLoveItemContainer = styled.div`
     background-image: linear-gradient(to bottom, #000, transparent);
-    
+    border-radius: 10px;
 `
 
 const ArtistLoveItemImageWrap = styled.div`
-     width: calc((100vw - 240px)/6);
+    width: calc((100vw - 240px)/6);
     position: relative;
     height:calc((100vw - 240px)/4.5);
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;
     position: relative;
+    @media (max-width: 1024px) {
+        width: calc((100vw - 240px)/4);
+        height:calc((100vw - 240px)/3);
+    }
+    
 `
 const ArtistLoveItemImage = styled(Image)`
  transition: all .2s ease;
@@ -52,6 +57,11 @@ const Icon = styled.div`
     opacity: 0;
     pointer-events: none;
 
+    @media (max-width: 1024px) {
+        top: 30px;
+    }
+    
+
     ${ArtistLoveItemImageWrap}:hover & {
         visibility: visible;
     opacity: 100;
@@ -69,6 +79,10 @@ const ContentName = styled.h3`
     font-size: 20px;
     font-weight: 700;
     margin-left: 10px;
+
+    @media (max-width: 1024px) {
+        font-size: 16px;
+    }
 `
 const ContentImageWrap = styled.div`
     

@@ -16,15 +16,21 @@ const NewSong = ({ data }) => {
         <SectionSliderContainer>
             <SectionSliderTitle>{data.title}</SectionSliderTitle>
             <Swiper
-                slidesPerView={3}
+                slidesPerView={2}
                 spaceBetween={20}
                 pagination={{
                     clickable: true,
                 }}
                 navigation={true}
                 modules={[Autoplay, Navigation]}
-                // autoplay={{ delay: 2000 }}
+                autoplay={{ delay: 2000 }}
                 className="mySwiper"
+                breakpoints={{
+                    1024: {
+                        slidesPerView: 3,
+                        // spaceBetween: 10
+                    }
+                }}
             >
                 {data.items.map((item, index) => (
                     <SwiperSlide key={index}>
@@ -32,7 +38,7 @@ const NewSong = ({ data }) => {
                     </SwiperSlide>
                 ))}
             </Swiper>
-        </SectionSliderContainer>
+        </SectionSliderContainer >
     )
 }
 

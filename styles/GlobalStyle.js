@@ -16,7 +16,8 @@ export const themeLight = {
     activeColor: '#6B3483',
     secondTextColor: 'rgba(0,0,0,0.7)',
     hoverColor: '#9c32ca',
-    borderColor: 'rgba(0,0,0,0.1)'
+    borderColor: 'rgba(0,0,0,0.1)',
+    footerColor: 'rgba(0,0,0,0.05)'
 }
 
 export const themeDark = {
@@ -27,5 +28,6 @@ export const themeDark = {
     activeColor: '#DADADA',
     secondTextColor: 'rgba(255,255,255,0.5)',
     hoverColor: '#6e8ffb',
-    borderColor: 'rgba(255,255,255,0.1)'
+    borderColor: 'rgba(255,255,255,0.1)',
+    footerColor: '#fff'
 }

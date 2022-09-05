@@ -5,13 +5,18 @@ import styled from 'styled-components'
 import { getTimeEvent } from '../../utils/getTime'
 
 const ArtistLoveItemImageWrap = styled.div`
-     width: calc((100vw - 240px)/3.5);
-    position: relative;
+    width: calc((100vw - 240px)/3.5);
     height:calc((100vw - 240px)/6);
+    position: relative;
     overflow: hidden;
     border-radius: 4px;
     cursor: pointer;
     position: relative;
+
+    @media (max-width: 1024px) {
+        width: calc((100vw - 240px)/2);
+    height:calc((100vw - 240px)/4);
+    }
 `
 const ArtistLoveItemImage = styled(Image)`
  transition: all .2s ease;

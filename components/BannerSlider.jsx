@@ -9,13 +9,18 @@ import styled from 'styled-components'
 const ImageContainer = styled.div`
     width: 100%;
     height: 180px;
-   
+    @media (max-width: 1024px) {
+        height: 160px;
+    }
 `
 const ImageItem = styled(Image)`
      border-radius: 10px;
 `
 const BannerSliderContainer = styled.div`
     padding: 20px 50px 0 50px;
+    @media (max-width: 1024px) {
+        padding: 20px 20px 0 20px;
+    }
 `
 
 const BannerSlider = ({ data }) => {

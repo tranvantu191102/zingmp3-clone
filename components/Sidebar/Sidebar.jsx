@@ -17,6 +17,10 @@ const SidebarContainer = styled.div`
     background-color: ${props => props.theme.sidebarColor};
     color: ${props => props.theme.mainColor};
     z-index: 999;
+
+    @media (max-width: 1024px) {
+        width: 70px;
+    }
 `
 
 const SidebarImageWrap = styled.div`
@@ -26,6 +30,12 @@ const SidebarImageWrap = styled.div`
     height: 70px;
     width: 100%;
     padding: 0 25px;
+    cursor: pointer;
+    
+    @media (max-width: 1024px) {
+        padding: 0;
+        height: 50px;
+    }
 `
 
 const SidebarMenu = styled.div`
@@ -43,6 +53,12 @@ const SidebarMenuItem = styled.div`
    padding: 4px 25px;
    position: relative;
    color: ${props => props.active ? props.theme.activeColor : 'unset'};
+
+   @media (max-width: 1024px) {
+    padding: 0;
+    justify-content: center;
+    margin: 15px 0;
+    }
 
    &::before {
     content: '';
@@ -67,11 +83,19 @@ const SidebarMenuItem = styled.div`
 `
 const SidebarMenuItemIcon = styled.div`
     margin-right: 10px;
+    @media (max-width: 1024px) {
+       margin-right: 0;
+       margin-top: 5px;
+    }
 `
 const SidebarMenuItemText = styled.p`
     color: unset;
     font-size: 13px;
     font-weight: 700;
+
+    @media (max-width: 1024px) {
+       display: none;
+    }
 `
 
 
@@ -79,6 +103,19 @@ const Sidebar = () => {
 
     const { pathname } = useRouter()
     const [activeItem, setActiveItem] = useState(pathname)
+    const [widthBrowser, setWidthBrowser] = useState(window.innerWidth)
+
+    useEffect(() => {
+        const handler = (e) => {
+            setWidthBrowser(e.target.innerWidth)
+        }
+
+        window.addEventListener('resize', handler)
+
+        return () => {
+            window.removeEventListener('resize', handler)
+        }
+    }, [])
 
     useEffect(() => {
         setActiveItem(pathname)
@@ -88,11 +125,20 @@ const Sidebar = () => {
         <SidebarContainer>
             <div>
                 <SidebarImageWrap >
-                    <Image
-                        src={logoPrimary}
-                        width={120}
-                        height={40}
-                    />
+                    {
+                        widthBrowser > 1024 ? <Image
+                            src={logoPrimary}
+                            width={120}
+                            height={40}
+                        />
+                            :
+                            <Image
+                                src={logoSecond}
+                                width={120}
+                                height={80}
+                            />
+                    }
+
                 </SidebarImageWrap>
                 <SidebarMenu>
                     {

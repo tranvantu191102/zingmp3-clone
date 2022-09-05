@@ -10,11 +10,18 @@ import { getTimeNewSong } from '../../utils/getTime'
 
 const NewSongItemContainer = styled.div`
     padding: 15px;
+    margin: 10px 4px;
     border-radius: 6px;
     box-shadow: 0 2px 10px 0 #cfcfcf66;
     display:  flex;
     align-items: flex-start;
     justify-content: start;
+    min-height: 160px;
+    /* width: 33%; */
+
+    @media (max-width: 1024px) {
+        /* width: 50%; */
+    }
 `
 const ImageWrap = styled.div`
     overflow: hidden;
@@ -98,7 +105,7 @@ const Place = styled.div`
     justify-content: space-between;
 `
 const Number = styled.div`
-    -webkit-text-stroke: 1px #6b3483;
+    -webkit-text-stroke: 1px ${props => props.theme.mainColor};
     font-size: 40px;
     font-weight: 900;
     color: transparent;

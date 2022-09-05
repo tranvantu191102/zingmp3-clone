@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import {
     SectionSliderContainer,
@@ -10,12 +10,16 @@ import EventDetail from './EventDetail'
 
 const Event = ({ data }) => {
 
+    useEffect(() => {
+        console.log(window.innerWidth)
+    }, [])
+
     return (
         <SectionSliderContainer>
             <SectionSliderTitle>{data.title}</SectionSliderTitle>
             <SectionSliderMenu>
                 {
-                    data.items.slice(0, 3).map((item, index) => (
+                    data.items.map((item, index) => (
                         <EventDetail data={item} key={index} />
                     ))
                 }
