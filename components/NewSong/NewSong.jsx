@@ -11,7 +11,6 @@ import {
 import NewSongItem from './NewSongItem';
 
 const NewSong = ({ data }) => {
-    console.log(data)
     SwiperCore.use([Autoplay]);
     return (
         <SectionSliderContainer>

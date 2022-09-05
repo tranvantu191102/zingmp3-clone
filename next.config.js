@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['photo-zmp3.zmdcdn.me', 'photo-resize-zmp3.zmdcdn.me', 's240-ava-talk-zmp3.zmdcdn.me'],
+    domains: ['photo-zmp3.zmdcdn.me', 'photo-resize-zmp3.zmdcdn.me', 's240-ava-talk-zmp3.zmdcdn.me', 'zmp3-static.zmdcdn.me'],
     minimumCacheTTL: 1500000,
   },
   compiler: {

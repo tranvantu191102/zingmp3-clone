@@ -6,6 +6,7 @@ import SectionSliderItem from './SectionSliderItem'
 
 export const SectionSliderContainer = styled.div`
     padding: 0 54px;
+    margin-bottom: 40px;
 `
 export const SectionSliderTitle = styled.h3`
     margin-bottom: 16px;
