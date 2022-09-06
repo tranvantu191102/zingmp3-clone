@@ -18,7 +18,9 @@ const SearchWrap = styled.div`
 `
 const SearchIcon = styled.div`
     padding: 0 8px;
+    width: 12px;
     cursor: pointer;
+    color:  ${props => props.theme.mainColor};
 `
 
 const SearchInput = styled.input`
@@ -27,6 +29,11 @@ const SearchInput = styled.input`
     background-color: transparent;
     padding: 10px 0;
     width: 100%;
+    color: ${props => props.theme.mainColor};
+
+    &::placeholder {
+        color: ${props => props.theme.mainColor};
+    }
 `
 
 const Search = () => {

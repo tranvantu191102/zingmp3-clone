@@ -92,7 +92,7 @@ export const ArtistsContainer = styled.div`
 `
 export const Artist = styled.div`
     font-size: 12px;
-    color:${props => props.theme.secondColor};
+    color:${props => props.theme.secondTextColor};
     &:hover {
         color:${props => props.theme.hoverColor};
         cursor: pointer;

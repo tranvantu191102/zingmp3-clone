@@ -29,7 +29,7 @@ export const SectionSliderMenu = styled.div`
 
 const SectionSlider = ({ data, showDescription }) => {
 
-    const [widthBrowser, setWidthBrowser] = useState(window.innerWidth)
+    const [widthBrowser, setWidthBrowser] = useState(typeof window !== 'undefined' && window.innerWidth)
 
     useEffect(() => {
         const handler = (e) => {

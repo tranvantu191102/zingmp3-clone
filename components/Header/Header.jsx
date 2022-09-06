@@ -44,6 +44,7 @@ const HeaderLeftItem = styled.div`
     align-items: center;
     justify-content: start;
     width: 16%;
+    color:  ${props => props.theme.mainColor};
 `
 const HeaderRightContainer = styled.div`
     display: flex;
@@ -60,10 +61,10 @@ const Header = () => {
                     <HeaderLeftItem>
 
                         <FontAwesomeIcon icon={faArrowLeftLong}
-                            style={{ marginRight: '20px', cursor: 'pointer', padding: '2px 5px' }} />
+                            style={{ marginRight: '10px', cursor: 'pointer', padding: '2px 5px' }} />
 
                         <FontAwesomeIcon icon={faArrowRightLong}
-                            style={{ cursor: 'pointer', padding: '2px 5px' }} />
+                            style={{ marginLeft: '10px', cursor: 'pointer', padding: '2px 5px' }} />
                     </HeaderLeftItem>
                     <Search />
                 </HeaderLeftContainer>

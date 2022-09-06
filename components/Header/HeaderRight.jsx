@@ -27,8 +27,8 @@ const InputCheckbox = styled.input`
 `
 
 const Label = styled.label`
-  width: 46px;
-  height: 20px;
+  width: 30px;
+  height: 16px;
   background-color:${props => props.theme.bgColor};
   display: flex;
   border-radius:50px;
@@ -41,15 +41,15 @@ const Label = styled.label`
   transform: scale(1.5);
 `
 const Ball = styled.div`
-     width: 18px;
-  height: 18px;
+     width: 16px;
+  height: 16px;
   background-color: ${props => props.theme.mainColor};
   position: absolute;
-  top: 0px;
-  left: 2px;
+  top: -1px;
+  left: 0;
   border-radius: 50%;
   transition: transform 0.2s linear;
-  transform: ${props => props.active ? 'translateX(22px)' : 'translateX(0)'};
+  transform: ${props => props.active ? 'translateX(12px)' : 'translateX(0)'};
 `
 
 const HeaderRight = () => {

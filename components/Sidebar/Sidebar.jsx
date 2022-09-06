@@ -103,9 +103,10 @@ const Sidebar = () => {
 
     const { pathname } = useRouter()
     const [activeItem, setActiveItem] = useState(pathname)
-    const [widthBrowser, setWidthBrowser] = useState(window.innerWidth)
+    const [widthBrowser, setWidthBrowser] = useState(typeof window !== 'undefined' && window.innerWidth)
 
     useEffect(() => {
+        // setWidthBrowser(window.innerWidth)
         const handler = (e) => {
             setWidthBrowser(e.target.innerWidth)
         }

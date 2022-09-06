@@ -77,13 +77,18 @@ const SectionSliderOption = styled.div`
 `
 const SectionSliderOptionItem = styled.div`
     width: 20%;
-    padding: 4px 6px;
+    padding: 6px 4px;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
     &:hover {
         background-color: rgba(255,255,255,0.2);
         border-radius: 50%;
+    }
+
+    @media (max-width: 1024px) {
+        padding: 4px 6px;
     }
 `
 

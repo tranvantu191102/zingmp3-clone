@@ -36,10 +36,10 @@ const Center = ({ data }) => {
                 playlist.map((item, index) => {
                     if (index === 3) {
                         return (
-                            <>
+                            <div key={index}>
                                 <NewSong data={newReleaseChart[0]} />
                                 <SectionSlider data={item} key={index} showDescription={index === 0 || index === 4} />
-                            </>
+                            </div>
                         )
                     }
                     return (
