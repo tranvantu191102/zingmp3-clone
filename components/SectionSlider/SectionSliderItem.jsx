@@ -12,10 +12,11 @@ import { ArtistsContainer, Artist } from '../NewSong/NewSongItem'
 const SectionSliderItemContainer = styled.div`
     width: 20%;
     position: relative;
+    margin-bottom: 20px;
 
-    /* @media (max-width: 1024px) {
-        width: 30%;
-    } */
+    @media (max-width: 1024px) {
+        width: 25%;
+    }
 `
 const SectionSliderImageWrap = styled.div`
     width: calc((100vw - 240px)/6);
@@ -77,7 +78,7 @@ const SectionSliderOption = styled.div`
 `
 const SectionSliderOptionItem = styled.div`
     width: 20%;
-    padding: 6px 4px;
+    padding: 2px 4px;
     display: flex;
     align-items: center;
     justify-content: center;

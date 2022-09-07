@@ -17,7 +17,7 @@ const MusicCardOptionsContainer = styled.div`
     opacity: ${props => props.active ? '100' : '0'};
     pointer-events: ${props => props.active ? 'auto' : 'none'};
     transition: all .2s ease;
-    box-shadow: 0 2px 5px ${props => props.theme.secondColor};
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
 
     @media (max-width: 1024px) {
         right: ${props => props.lastItem ? '0' : '-150px'};
@@ -29,6 +29,7 @@ const MusicCardOptionsItem = styled.div`
     justify-content: start;
     padding: 10px 14px;
     background-color: ${props => props.theme.bgColor};
+    cursor: pointer;
 
     &:hover {
         background-color: ${props => props.theme.sidebarColor};

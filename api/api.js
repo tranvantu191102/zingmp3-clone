@@ -1,15 +1,10 @@
+import axios from 'axios'
 import axiosClient from './axios'
 
-export const api = {
-    getHome: async () => {
-
-    }
-}
 
 export const getHome = async () => {
     try {
         const data = await axiosClient.get('/home')
-        console.log(data)
         const banner = data.items.filter(item => item.sectionType === 'banner')
         const playlist = data.items.filter(item => item.sectionType === 'playlist')
         const event = data.items.filter(item => item.sectionType === 'event')
@@ -24,3 +19,25 @@ export const getHome = async () => {
         console.log(error);
     }
 }
+
+
+export const getNewReleaseChart = async () => {
+    try {
+        const data = await axiosClient.get('/newreleasechart')
+
+        return data
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const getTop100 = async () => {
+    try {
+        const data = await axiosClient.get('/top100')
+
+        return data
+    } catch (error) {
+        console.log(error);
+    }
+}
+

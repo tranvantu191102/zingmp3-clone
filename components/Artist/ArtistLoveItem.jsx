@@ -12,7 +12,7 @@ const ArtistLoveItemContainer = styled.div`
 const ArtistLoveItemImageWrap = styled.div`
     width: calc((100vw - 240px)/6);
     position: relative;
-    height:calc((100vw - 240px)/4.5);
+    height:calc((100vw - 240px)/4);
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;

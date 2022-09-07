@@ -37,7 +37,7 @@ const BannerSlider = ({ data }) => {
                 }}
                 navigation={true}
                 modules={[Autoplay, Navigation]}
-                autoplay={{ delay: 2000 }}
+                // autoplay={{ delay: 2000 }}
                 className="mySwiper"
             >
                 {data.items.map((item, index) => (

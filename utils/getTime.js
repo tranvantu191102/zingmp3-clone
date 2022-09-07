@@ -34,3 +34,15 @@ export const getTimeNewSong = (time) => {
 
     return `${date}.${month}.${years}`
 }
+
+export const formatDurationSong = (time) => {
+    const minutes = Math.floor(time / 60)
+    let seconds = 0
+    if (Math.floor(minutes * 60) === Math.floor(time)) {
+        seconds = 0
+    } else {
+        seconds = Math.floor(time - (minutes * 60))
+    }
+
+    return `${minutes}:${seconds}`
+}

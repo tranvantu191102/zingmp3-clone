@@ -10,7 +10,6 @@ import tabletIcon from '../icons/tablet.svg'
 import musicIcon from '../icons/music.svg'
 import starIcon from '../icons/star.svg'
 import playIcon from '../icons/play.svg'
-import menuIcon from '../icons/menu.svg'
 
 export const headerDataTop = [
     {
@@ -43,13 +42,8 @@ export const headerDataTop = [
 export const headerDataBottom = [
     {
         display: 'Nhạc mới',
-        path: 'moi-phat-hanh',
+        path: 'new-song',
         icon: musicIcon
-    },
-    {
-        display: 'Thể loại',
-        path: 'hub',
-        icon: menuIcon
     },
     {
         display: 'Top 100',

@@ -1,13 +1,8 @@
 import Head from 'next/head'
 import { getHome } from '../api/api'
-import styled from 'styled-components'
 
-import Sidebar from '../components/Sidebar/Sidebar'
 import Center from '../components/Home/Center'
 
-const Main = styled.div`
-
-`
 
 export default function Home({ data }) {
   return (
