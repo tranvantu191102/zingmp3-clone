@@ -165,7 +165,7 @@ const Sidebar = () => {
                     {
                         headerDataBottom.map((item, index) => (
                             <Link href={item.path} key={index}>
-                                <SidebarMenuItem active={activeItem === `/${item.path}`}>
+                                <SidebarMenuItem active={activeItem === `${item.path}`}>
                                     <SidebarMenuItemIcon >
                                         <Image
                                             src={item.icon}

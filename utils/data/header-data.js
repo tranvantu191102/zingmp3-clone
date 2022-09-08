@@ -27,32 +27,51 @@ export const headerDataTop = [
         path: 'zing-chart',
         icon: chartIcon
     },
-    {
-        display: 'Radio',
-        path: 'radio',
-        icon: radioIcon
-    },
-    {
-        display: 'Theo dõi',
-        path: 'the-loai-nghe-si',
-        icon: tabletIcon
-    }
+    // {
+    //     display: 'Radio',
+    //     path: 'radio',
+    //     icon: radioIcon
+    // },
+    // {
+    //     display: 'Theo dõi',
+    //     path: 'the-loai-nghe-si',
+    //     icon: tabletIcon
+    // }
 ]
 
 export const headerDataBottom = [
     {
         display: 'Nhạc mới',
-        path: 'new-song',
+        path: '/new-song',
         icon: musicIcon
     },
     {
         display: 'Top 100',
-        path: 'top-100',
+        path: '/top-100',
         icon: starIcon
     },
     {
         display: 'MV',
-        path: 'the-loai-video',
+        path: '/videos/IWZ9Z08I',
         icon: playIcon
+    }
+]
+
+export const headerDataMV = [
+    {
+        display: 'việt nam',
+        id: 'IWZ9Z08I',
+    },
+    {
+        display: 'us-uk',
+        id: 'IWZ9Z08O',
+    },
+    {
+        display: 'kpop',
+        id: 'IWZ9Z08W',
+    },
+    {
+        display: 'hoà tấu',
+        id: 'IWZ9Z086',
     }
 ]

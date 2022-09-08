@@ -93,6 +93,7 @@ export const ArtistsContainer = styled.div`
 export const Artist = styled.div`
     font-size: 12px;
     color:${props => props.theme.secondTextColor};
+    margin-right: 2px;
     &:hover {
         color:${props => props.theme.hoverColor};
         cursor: pointer;
@@ -137,7 +138,7 @@ const NewSongItem = ({ data, index }) => {
                     {
                         data.artists.map((item, index) => (
                             <Link key={index} href={`/artists/${item.alias}`}>
-                                <Artist >{`${index > 0 ? ', ' : ''}${item.name}`}</Artist>
+                                <Artist >{`${item.name}${index + 1 < data.artists.length ? ', ' : ''}`}</Artist>
                             </Link>
                         ))
                     }

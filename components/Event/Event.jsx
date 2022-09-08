@@ -11,7 +11,7 @@ import EventDetail from './EventDetail'
 const Event = ({ data }) => {
 
     useEffect(() => {
-        console.log(window.innerWidth)
+        // console.log(window.innerWidth)
     }, [])
 
     return (

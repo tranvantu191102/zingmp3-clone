@@ -8,9 +8,12 @@ import {
 import ArtistLoveItem from './ArtistLoveItem'
 
 const ArtistLove = ({ data }) => {
-    const [widthBrowser, setWidthBrowser] = useState(typeof window !== 'undefined' && window.innerWidth)
+    const [widthBrowser, setWidthBrowser] = useState(undefined)
 
     useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setWidthBrowser(window.innerWidth)
+        }
         const handler = (e) => {
             setWidthBrowser(e.target.innerWidth)
         }

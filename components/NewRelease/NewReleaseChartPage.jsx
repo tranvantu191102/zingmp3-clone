@@ -7,31 +7,31 @@ import Image from 'next/image'
 import background from '../../assets/images/new-release-bg.jpg'
 import MusicCardItem from '../MusicCard/MusicCardItem'
 
-const NewReleaseChartPageContainer = styled.div`
+export const NewReleaseChartPageContainer = styled.div`
     padding-left: 240px;
     margin-top: 70px;
     background-color: ${props => props.theme.bgColor};
     position: relative;
     padding-bottom: 100px;
 `
-const Background = styled.div`
+export const Background = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 380px;
     width: 100%;
 `
-const BackgroundContainer = styled.div`
+export const BackgroundContainer = styled.div`
     position: relative;
 `
-const Overlay = styled.div`
+export const Overlay = styled.div`
     position: absolute;
     height: 380px;
     inset: 0;
     z-index: 0;
     background-image: linear-gradient(180deg,hsla(0,0%,100%,0) 37%,${props => props.theme.bgColor});
 `
-const OverlayBottom = styled.div`
+export const OverlayBottom = styled.div`
     position: absolute;
     inset: 0;
     opacity: 0.8;
@@ -39,26 +39,26 @@ const OverlayBottom = styled.div`
     z-index: 1;
     background-image: linear-gradient(180deg,${props => props.theme.bgColor},${props => props.theme.bgColor});
 `
-const TitleWrap = styled.div`
+export const TitleWrap = styled.div`
     display: flex;
     align-items: center;
     color: ${props => props.theme.activeColor};
     justify-content: flex-start;
 `
-const Content = styled.div`
+export const Content = styled.div`
     position: absolute;
     bottom: 50%;
     transform: translateY(-50%);
     left: 54px;
     z-index: 1;
 `
-const Title = styled.div`
+export const Title = styled.div`
     font-size: 40px;
     font-weight: 700;
     color:inherit;
     margin-right: 10px;
 `
-const PlaylistSong = styled.div`
+export const PlaylistSong = styled.div`
      display: flex;
     align-items: center;
     justify-content: center;
@@ -69,7 +69,7 @@ const PlaylistSong = styled.div`
     left: 54px;
     z-index: 1; */
 `
-const Banner = styled.div`
+export const Banner = styled.div`
     position: absolute;
     bottom: 20%;
     left: 54px;
@@ -89,7 +89,7 @@ const NewReleaseChartPage = ({ data }) => {
                 <Content>
                     <TitleWrap>
                         <Title>{data.title}</Title>
-                        <FontAwesomeIcon icon={faPlayCircle} style={{ width: '40px' }} />
+                        <FontAwesomeIcon icon={faPlayCircle} style={{ width: '40px', fontSize: '40px' }} />
                     </TitleWrap>
 
                 </Content>

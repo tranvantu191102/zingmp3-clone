@@ -172,8 +172,8 @@ const Title = styled.h4`
     font-weight: 700;
     color: ${props => props.theme.mainColor};
     cursor: pointer;
-    padding: 4px 0;
-    margin: 0;
+    padding: 0 ;
+    margin:6px 0 8px 0;
 
     &:hover {
         color: ${props => props.theme.hoverColor};
@@ -240,7 +240,7 @@ const SectionSliderItem = ({ item, index, showDescription }) => {
                         {
                             item?.artists?.map((el, i) => (
                                 <Link key={i} href={`/artists/${el.alias}`}>
-                                    <Artist >{`${i > 0 ? ', ' : ''}${el.name}`}</Artist>
+                                    <Artist >{`${el.name}${i + 1 < item.artists.length ? ', ' : ''}`}</Artist>
                                 </Link>
                             ))
                         }

@@ -19,6 +19,7 @@ const SearchWrap = styled.div`
 const SearchIcon = styled.div`
     padding: 0 8px;
     width: 12px;
+    margin-right: 16px;
     cursor: pointer;
     color:  ${props => props.theme.mainColor};
 `

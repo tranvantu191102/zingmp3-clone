@@ -1,4 +1,3 @@
-import axios from 'axios'
 import axiosClient from './axios'
 
 
@@ -40,4 +39,46 @@ export const getTop100 = async () => {
         console.log(error);
     }
 }
+
+export const getMV = async ({ id }) => {
+    try {
+        const data = await axiosClient.get('/video', {
+            params: {
+                id: id
+            }
+        })
+
+        return data
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const getlistMV = async (id, page, count) => {
+    try {
+        const data = await axiosClient.get("/listmv", {
+            params: {
+                id: id,
+                page: page,
+                count: count
+            }
+        })
+        return data
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+export const getChartHome = async () => {
+    try {
+        const data = await axiosClient.get('/charthome')
+
+        return data
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+
 

@@ -37,7 +37,6 @@ const ImageMain = styled(Image)`
 
 
 const ZingChart = ({ data }) => {
-    console.log(data)
     return (
         <ZingChartContainer>
             {
